@@ -28,8 +28,6 @@
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
             >
               Add Content
             </a>
@@ -50,4 +48,74 @@
       </div>
     </div>
   </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><b> Add Mall</b></h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputMall">Mall Name</label>
+              <input
+                type="text"
+                class="form-control"
+                ngControl="exampleInputMall"
+                placeholder="Enter mall name  "
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputAddress">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                ngControl="exampleInputAddress"
+                placeholder="Enter mall address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Desription</label>
+              <textarea
+                class="form-control"
+                ngControl="exampleFormControlTextarea1"
+                rows="3"
+                name="editor1"
+              >
+              </textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFacilities">Facilities</label>
+              <input
+                type="email"
+                class="form-control"
+                ngControl="exampleInputFacilities"
+                placeholder="Enter mall facilities "
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" (click)="(postSave)">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

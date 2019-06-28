@@ -11,6 +11,8 @@ import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HttpService } from "./http.service";
 import { HttpClientModule } from "@angular/common/http";
+// import { CKEditorModule } from "@ckeditor/ckeditor5-angular";
+// import { FormsModule } from "@angular/forms/forms";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,13 @@ import { HttpClientModule } from "@angular/common/http";
     HeaderComponent,
     FooterComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+    // CKEditorModule
+    // FormsModule
+  ],
   providers: [HttpService],
   bootstrap: [AppComponent]
 })

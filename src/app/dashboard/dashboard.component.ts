@@ -8,13 +8,13 @@ import { Router } from "@angular/router";
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-  apiProducts;
+  apiPlaces;
   constructor(public httpService: HttpService, public router: Router) {}
 
   ngOnInit() {
     this.httpService.getPlace().subscribe(resp => {
-      this.apiProducts = resp["data"];
       console.log(resp);
+      this.apiPlaces = resp;
     });
   }
 }
